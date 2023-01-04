@@ -1,0 +1,83 @@
+.logo-container {
+  width: 400px;
+  height: 609px;
+  position: absolute;
+  top: 0;
+  right: 15%;
+  bottom: 0;
+  left: auto;
+  margin: auto;
+
+  svg {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    transform: rotateZ(30deg) !important;
+  }
+
+  .solid-logo {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    opacity: 0;
+    transform: rotateZ(30deg) !important;
+    z-index: 1;
+    animation: animateLogo 16s linear 4s 1 forwards;
+  }
+
+  path {
+    stroke: #ffd700;
+    stroke-width: 10;
+    stroke-dasharray: 97203;
+    animation: animateOutline 20s linear;
+  }
+}
+
+@keyframes animateOutline {
+  0% {
+    stroke-dashoffset: 97203;
+  }
+  20% {
+    stroke-dashoffset: 80000;
+  }
+  40% {
+    stroke-dashoffset: 60000;
+  }
+  60% {
+    stroke-dashoffset: 40000;
+  }
+  80% {
+    stroke-dashoffset: 20000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes animateLogo {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.2;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
