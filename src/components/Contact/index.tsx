@@ -22,23 +22,25 @@ const Contact = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    if (form.current)
+    if (form.current){
+      console.log(process.env.REACT_APP_EMAIL_SERVICE_ID);
       emailjs
         .sendForm(
-          "service_7unnuol",
-          "template_xusluuz",
+          process.env.REACT_APP_EMAIL_SERVICE_ID as string,
+          process.env.REACT_APP_EMAIL_TEMPLATE_ID as string,
           form.current,
-          "GcCj2Vk-KahKd0UqM"
+          process.env.REACT_APP_EMAIL_ACCOUNT_ID as string
         )
         .then(
           () => {
-            alert("Message successfully sent!")
-            window.location.reload()
+            alert("Message successfully sent!");
+            window.location.reload();
           },
           () => {
-            alert("Failed to send the message, please try again")
+            alert("Failed to send the message, please try again");
           }
-        )
+        );
+        }
   }
 
   return (

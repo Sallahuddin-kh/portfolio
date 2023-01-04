@@ -20,6 +20,7 @@
     "@types/react": "^18.0.18",
     "@types/react-dom": "^18.0.6",
     "animate.css": "4.1.1",
+    "env-cmd": "^10.1.0",
     "leaflet": "1.9.2",
     "loaders.css": "0.1.2",
     "n": "^9.0.1",
@@ -35,7 +36,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "env-cmd -f .env react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
